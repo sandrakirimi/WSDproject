@@ -1,0 +1,83 @@
+﻿@page
+@model Hotelone19301408.Pages.Bookings.SearchModel
+@{
+    ViewData["Title"] = "search";
+}
+
+<h1>Search Booking</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="search.BedCount" class="control-label"></label>
+                <select asp-for="search.BedCount" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="search.CheckIn" class="control-label"></label>
+                <input asp-for="search.CheckIn" class="form-control" />
+                <span asp-validation-for="search.CheckIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="search.CheckOut" class="control-label"></label>
+                <input asp-for="search.CheckOut" class="form-control" />
+                <span asp-validation-for="search.CheckOut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+@if (ViewData["SuccessDB"] != null)
+{
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rooms[0].ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rooms[0].Level)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rooms[0].BedCount)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rooms[0].Price)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Rooms)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Level)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.BedCount)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukel\\OneDrive\\Desktop\\WSD\\Project\\Hotelone19301408\\Hotelone19301408.csproj": {}
+    "C:\\Users\\Sandra\\Desktop\\WSD Project\\WSDproject\\Hotelone19301408.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukel\\OneDrive\\Desktop\\WSD\\Project\\Hotelone19301408\\Hotelone19301408.csproj": {
+    "C:\\Users\\Sandra\\Desktop\\WSD Project\\WSDproject\\Hotelone19301408.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukel\\OneDrive\\Desktop\\WSD\\Project\\Hotelone19301408\\Hotelone19301408.csproj",
+        "projectUniqueName": "C:\\Users\\Sandra\\Desktop\\WSD Project\\WSDproject\\Hotelone19301408.csproj",
         "projectName": "Hotelone19301408",
-        "projectPath": "C:\\Users\\lukel\\OneDrive\\Desktop\\WSD\\Project\\Hotelone19301408\\Hotelone19301408.csproj",
-        "packagesPath": "C:\\Users\\lukel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukel\\OneDrive\\Desktop\\WSD\\Project\\Hotelone19301408\\obj\\",
+        "projectPath": "C:\\Users\\Sandra\\Desktop\\WSD Project\\WSDproject\\Hotelone19301408.csproj",
+        "packagesPath": "C:\\Users\\Sandra\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sandra\\Desktop\\WSD Project\\WSDproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\lukel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sandra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
@@ -89,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

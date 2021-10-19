@@ -1,0 +1,59 @@
+﻿@page
+@model Hotelone19301408.Pages.Bookings.CalcGomaStatsModel
+@{
+    ViewData["Title"] = "CalcGomaStats";
+    Layout = "~/Pages/Shared/_layout.cshtml";
+}
+<h2>Customer distribution with respect to postcodes</h2>
+<br />
+<div>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.gomaStats[0].PostCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.gomaStats[0].CustomerCount)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.gomaStats)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerCount)
+                </td>
+            </tr>
+
+        }
+    </table>
+    <h2>Booking distribution with respect to rooms</h2>
+    <br/>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(m => m.gomaStats[0].RoomID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(m => m.gomaStats[0].BookingCount)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.gomaStats)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RoomID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookingCount)
+                </td>
+            </tr>
+
+        }
+    </table>
+</div>
+

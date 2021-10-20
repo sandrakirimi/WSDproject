@@ -22,7 +22,8 @@ namespace Hotelone19301408.Pages.Bookings
         }
 
         public IList<GomaStatistic> gomaStats { get; set; }
-        
+        public IList<GomaStatistic> goma1Stats { get; set; }
+
         public async Task<IActionResult> OngetAsync()
         {
 
@@ -30,15 +31,18 @@ namespace Hotelone19301408.Pages.Bookings
             var CustomerGroups = _context.Customer.GroupBy(m => m.PostCode);
 
             gomaStats = await CustomerGroups.Select(g => new GomaStatistic { PostCode = g.Key, CustomerCount = g.Count() }).ToListAsync();
-            return Page();
+           
         
      
-            /*{
-                var BookingGroups = _context.Booking.GroupBy(m => m.RoomID);
 
-                gomaStats = await BookingGroups.Select(g => new GomaStatistic { RoomID = g.Key, BookingCount = g.Count() }).ToListAsync();
 
-            }*/
+        var BookingGroups = _context.Booking.GroupBy(m => m.RoomID);
+
+                goma1Stats = await BookingGroups.Select(g => new GomaStatistic { RoomID = g.Key, BookingCount = g.Count() }).ToListAsync();
+
+
+                return Page();
+            
 
         }
     }

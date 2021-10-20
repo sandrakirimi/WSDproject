@@ -17,7 +17,7 @@ namespace Hotelone19301408.Models
         public string Level { get; set; }
 
 
-        [RegularExpression(@"^[1-3]{1}$", ErrorMessage ="Number of the beds can range from 1-3")]
+        [RegularExpression(@"^[1-3]{1}$", ErrorMessage ="Number of beds can range from 1-3")]
         [Display(Name ="Bed Count")]
         public int BedCount { get; set; }
 
